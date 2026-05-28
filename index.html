@@ -17,24 +17,108 @@ font-family:Arial,sans-serif;
 html{
 scroll-behavior:smooth;
 }
+.top-buttons{
+  position:absolute;
+  top:18px;
+  right:25px;
+  display:flex;
+  gap:12px;
+}
+
+.top-call-btn{
+  background:#1565c0;
+  color:white;
+  padding:10px 18px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.top-whatsapp-btn{
+  background:#25D366;
+  color:white;
+  padding:10px 18px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:600;
+}
 
 body{
 background:linear-gradient(135deg,#eef6ff,#f7fffb);
 color:#1f2937;
 line-height:1.6;
 }
+/* ===== HEADER FIX ===== */
+.site-header{
+  background:#ffffff !important;
+  min-height:80px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:sticky;
+  top:0;
+  z-index:9999;
+  box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
 
-/* Header */
-header{
-position:sticky;
-top:0;
-z-index:999;
-background:linear-gradient(135deg,#1565c0,#0d47a1);
-padding:18px 40px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-box-shadow:0 4px 15px rgba(0,0,0,.1);
+.logo{
+  position:absolute;
+  left:20px;
+  color:#0d47a1 !important;
+  font-size:28px;
+  font-weight:700;
+  display:block !important;
+  visibility:visible !important;
+}
+
+.main-nav{
+  display:flex !important;
+  gap:32px;
+  align-items:center;
+}
+
+.main-nav a{
+  color:#111827 !important;
+  font-size:18px;
+  font-weight:600;
+  text-decoration:none;
+  display:inline-block !important;
+  visibility:visible !important;
+}
+
+.top-buttons{
+  position:absolute;
+  right:20px;
+  display:flex;
+  gap:12px;
+}
+
+.top-call-btn{
+  background:#1565c0;
+  color:white;
+  padding:10px 16px;
+  border-radius:12px;
+  text-decoration:none;
+}
+
+.top-whatsapp-btn{
+  background:#25D366;
+  color:white;
+  padding:10px 16px;
+  border-radius:12px;
+  text-decoration:none;
+}
+nav a:hover{
+  color:#1565c0;
+}
+
+/* Right Buttons */
+.top-buttons{
+  position:absolute;
+  right:20px;
+  top:12px;
+  display:flex;
+  gap:10px;
 }
 
 .logo{
@@ -375,17 +459,24 @@ grid-template-columns:1fr;
 </style>
 </head>
 <body>
+<header class="site-header">
 
-<header>
-<div class="logo">⚡ Genz Electrician</div>
+  <div class="logo">
+    ⚡ Genz Electrician
+  </div>
 
-<nav>
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#about">About</a>
-<a href="#reviews">Reviews</a>
-<a href="#contact">Contact</a>
-</nav>
+  <nav class="main-nav">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="top-buttons">
+    <a href="tel:8489253789" class="top-call-btn">📞 Call</a>
+    <a href="https://wa.me/918489253789" target="_blank" class="top-whatsapp-btn">💬 WhatsApp</a>
+  </div>
+
 </header>
 <section class="hero" id="home">
 
@@ -407,12 +498,14 @@ grid-template-columns:1fr;
     </a>
   </div>
 
-  <div class="hero-right">
-    <img
-  src="https://images.openai.com/static-rsc-4/GJTP6TNKzfWYM8YfoFX_vy9svdp3frAdmZUhh01vlqij4ktFRe24pJ_i_p7sGhSLD64xSpPz7mNIKtKJBu7OWP6KvdDSLw-zFk3A8_dbkYuHiiweUywQcfwPcAXyr9EJUFbbSOhn0rHo3u_kL8fE0ECCaWX5ChOxcjHd7U4GO5JAPE1IXovTHmTnYSEjaGx7?purpose=fullsize"
-  alt="Air Compressor Repair"
->
-  </div>
+ 
+<div class="hero-right">
+  <img
+    src="images/owner.jpg"
+    alt="Paneer Selvam - Owner"
+  >
+</div>
+
 
 </section>
 <section id="services">
